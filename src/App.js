@@ -24,13 +24,6 @@ const link = from([
   new HttpLink({ uri: 'http://ac-dc.herokuapp.com/graphql' })
 ])
 
-/*
-const link = from([
-  errorLink,
-  new HttpLink({ uri: 'http://localhost:3000/graphql' })
-])
-*/
-
 const client = new ApolloClient({
   cache: new InMemoryCache(),
   link: link
