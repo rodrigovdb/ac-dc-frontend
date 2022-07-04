@@ -1,0 +1,18 @@
+.AlbumsList {
+}
+
+.AlbumsList .AlbumsListItem{
+    background-color: #f0f;
+    clear: both;
+}
+
+.AlbumsList .AlbumsListItem img{
+    height: 50px;
+    float: left;
+}
+
+.AlbumsList .AlbumsListItem span.AlbumsListItemText {
+    float: left;
+    height: 50px;
+    border: solid 1px #000;
+}
