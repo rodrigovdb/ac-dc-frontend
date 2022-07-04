@@ -1,15 +1,10 @@
 import React from 'react';
+import { useAlbums } from '../hooks/useAlbums';
 
-import { useQuery, gql } from "@apollo/client"
-
-import { LOAD_ALBUMS } from '../GraphQL/Resolvers'
 import './AlbumsList.css';
 
-import { Row, Col, Collection, CollectionItem } from 'react-materialize'; 
-
 export default function AlbumsList() {
-    const { error, loading, data } = useQuery(LOAD_ALBUMS)
-
+    const { error, loading, data } = useAlbums()
     // console.log({ error, loading, data})
 
     if(loading){
@@ -24,7 +19,7 @@ export default function AlbumsList() {
                 {data.albums.map(album => {
                     return (
                         <li className="AlbumsListItem" key={album.id.toString()}>
-                            <img src={album.coverImage} />
+                            <img alt={album.name} src={album.coverImage} />
                             <h3 className="AlbumsListItemText">
                                 {album.name}
                             </h3>
