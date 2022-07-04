@@ -25,3 +25,8 @@ ul.AlbumsList li.AlbumsListItem:hover{
     margin-top: 15px;
     margin-left: 10px;
 }
+
+.AlbumsList .AlbumsListItem .SongsCount {
+    float: right;
+    margin-top: 17px;
+}

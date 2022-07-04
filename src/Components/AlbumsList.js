@@ -28,6 +28,9 @@ export default function AlbumsList() {
                             <h3 className="AlbumsListItemText">
                                 {album.name}
                             </h3>
+                            <span className="SongsCount">
+                                {album.songs.length} songs
+                            </span>
                         </li>
                     )
                 })}
