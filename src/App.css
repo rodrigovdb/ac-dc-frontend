@@ -1,4 +1,23 @@
-.App{
+#root{
     font-family: Arial, Helvetica, sans-serif;
     color: #555;
+}
+
+#pageTitle{
+    margin-left: 50px;
+}
+
+#pageFooter{
+    text-align: center;
+    font-size: 13px;
+}
+
+#pageFooter a, #pageFooter a:visited{
+    color: #000;
+    font-weight: bold;
+}
+
+#pageFooter a:hover{
+    text-decoration: none;
+    color: #777;
 }
