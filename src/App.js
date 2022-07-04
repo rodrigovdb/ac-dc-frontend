@@ -7,6 +7,8 @@ import {
   from,
 } from '@apollo/client';
 
+import config from './config'
+
 import GetAlbums from './Components/GetAlbums';
 
 import { ErrorLink, onError } from '@apollo/client/link/error'
@@ -21,7 +23,7 @@ const errorLink = onError(({ graphqlErrors, networkError }) => {
 
 const link = from([
   errorLink,
-  new HttpLink({ uri: 'http://ac-dc.herokuapp.com/graphql' })
+  new HttpLink({ uri: config.apiUrl })
 ])
 
 const client = new ApolloClient({
