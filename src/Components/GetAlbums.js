@@ -9,7 +9,7 @@ function GetAlbums() {
 
     useEffect(() => {
         if(data) {
-            console.log(data);
+            // console.log(data);
             setAlbums(data.albums)
         }
     }, [data])
@@ -17,7 +17,7 @@ function GetAlbums() {
 
     return <ul>
         {albums.map((album) => {
-            return <li>{album.name}</li>;
+            return <li key={album.id.toString()}>{album.name}</li>;
         })}
     </ul>;
 
