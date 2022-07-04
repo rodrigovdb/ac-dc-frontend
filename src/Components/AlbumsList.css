@@ -1,18 +1,27 @@
-.AlbumsList {
+ul.AlbumsList {
+    list-style-type: none;
 }
 
-.AlbumsList .AlbumsListItem{
-    background-color: #f0f;
+ul.AlbumsList li.AlbumsListItem{
+    padding: 10px;
+    border: solid 1px #ccc;
+    margin: 10px 0px;
+    border-radius: 10px;
     clear: both;
+    height: 50px;
+}
+
+ul.AlbumsList li.AlbumsListItem:hover{
+    background-color: #efefef;
 }
 
 .AlbumsList .AlbumsListItem img{
-    height: 50px;
     float: left;
+    height: 50px;
 }
 
-.AlbumsList .AlbumsListItem span.AlbumsListItemText {
+.AlbumsList .AlbumsListItem h3.AlbumsListItemText {
     float: left;
-    height: 50px;
-    border: solid 1px #000;
+    margin-top: 15px;
+    margin-left: 10px;
 }

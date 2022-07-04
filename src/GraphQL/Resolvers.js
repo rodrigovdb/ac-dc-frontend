@@ -6,6 +6,10 @@ export const LOAD_ALBUMS = gql`
             id
             name
             coverImage
+            songs {
+                id
+                name
+            }
         }
     }
 `

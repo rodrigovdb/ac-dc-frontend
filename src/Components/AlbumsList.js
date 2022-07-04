@@ -5,6 +5,8 @@ import { useQuery, gql } from "@apollo/client"
 import { LOAD_ALBUMS } from '../GraphQL/Resolvers'
 import './AlbumsList.css';
 
+import { Row, Col, Collection, CollectionItem } from 'react-materialize'; 
+
 export default function AlbumsList() {
     const { error, loading, data } = useQuery(LOAD_ALBUMS)
 
@@ -18,18 +20,18 @@ export default function AlbumsList() {
     }
     if(data){
         return(
-            <div className="AlbumsList">
+            <ul className="AlbumsList">
                 {data.albums.map(album => {
                     return (
-                        <div className="AlbumsListItem" key={album.id.toString()}>
+                        <li className="AlbumsListItem" key={album.id.toString()}>
                             <img src={album.coverImage} />
-                            <span className="AlbumsListItemText">
+                            <h3 className="AlbumsListItemText">
                                 {album.name}
-                            </span>
-                        </div>
+                            </h3>
+                        </li>
                     )
                 })}
-            </div>
+            </ul>
         )
     }
 }
