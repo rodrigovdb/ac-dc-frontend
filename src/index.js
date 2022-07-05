@@ -5,19 +5,22 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ApolloProvider } from '@apollo/client';
 import client from './client'
+import { BrowserRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <h1 id="pageTitle">AC/DC Studio Albums</h1>
+    <BrowserRouter>
+      <h1 id="pageTitle">AC/DC Studio Albums</h1>
 
-    <ApolloProvider client={client}>
-      <App />
-    </ApolloProvider>
+      <ApolloProvider client={client}>
+        <App />
+      </ApolloProvider>
 
-    <footer id="pageFooter">
-      by <a href="https://github.com/rodrigovdb">@rodrigovdb</a>
-    </footer>
+      <footer id="pageFooter">
+        by <a href="https://github.com/rodrigovdb">@rodrigovdb</a>
+      </footer>
+    </BrowserRouter>
   </React.StrictMode>
 );
 

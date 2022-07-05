@@ -10,6 +10,7 @@
 #pageFooter{
     text-align: center;
     font-size: 13px;
+    clear: both;
 }
 
 #pageFooter a, #pageFooter a:visited{

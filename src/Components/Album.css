@@ -1,0 +1,21 @@
+.albumDetails{
+    margin-left: 50px;
+}
+
+.albumDetails img {
+    float: left;
+    margin-right: 20px;
+}
+
+.albumDetails .albumSongs{
+    float: left;
+}
+
+.albumDetails .albumSongs ul{
+    list-style: none;
+    margin-left: 0px;
+}
+
+.albumDetails .albumSongs ul li{
+    padding: 10px 0px;
+}
