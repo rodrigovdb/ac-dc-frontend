@@ -16,6 +16,7 @@ export default function Album(){
     }
     if(data){
         let album = data.album
+        let track = 0
 
         return(
             <div className="albumDetails">
@@ -25,8 +26,11 @@ export default function Album(){
                 <div className="albumSongs">
                     <ul>
                         {album.songs.map(song => {
+                            track++
                             return(
-                                <li key={song.id}>{song.name}</li>
+                                <li key={song.id}>
+                                    {track}. {song.name}
+                                </li>
                             )
                         })}
                     </ul>
