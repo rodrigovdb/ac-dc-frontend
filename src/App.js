@@ -8,8 +8,8 @@ function App(){
   return(
     <div className="App">
       <Routes>
-        <Route strict exact path="/" element={<AlbumsList />}/>
-        <Route strict exact path="/:id" element={<Album />}/>
+        <Route strict exact path="/ac-dc-frontend/" element={<AlbumsList />}/>
+        <Route strict exact path="/ac-dc-frontend/:id" element={<Album />}/>
       </Routes>
     </div>
   )
