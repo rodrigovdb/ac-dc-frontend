@@ -2,6 +2,7 @@
   "name": "ac-dc-frontend",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://rodrigovdb.github.io/ac-dc-frontend",
   "dependencies": {
     "@apollo/client": "^3.6.9",
     "@testing-library/jest-dom": "^5.16.4",
