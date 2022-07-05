@@ -1,17 +1,18 @@
 import React from 'react'
+import { useParams } from 'react-router';
 import { useAlbum } from '../hooks/useAlbum'
 
 import './Album.css';
 
 export default function Album(){
-    const { error, loading, data } = useAlbum(2);
-
-    // console.log(error, loading, data)
+    const {id} = useParams()
+    const { error, loading, data } = useAlbum(id);
 
     if(loading){
         return <div>spinner...</div>
     }
     if(error){
+        console.log(error)
         return <div>something went wrong</div>
     }
     if(data){

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useAlbums } from '../hooks/useAlbums';
 
 import './AlbumsList.css';
@@ -18,15 +19,17 @@ export default function AlbumsList() {
             <ul className="AlbumsList">
                 {data.albums.map(album => {
                     return (
-                        <li className="AlbumsListItem" key={album.id.toString()}>
-                            <img alt={album.name} src={album.coverImage} />
-                            <h3 className="AlbumsListItemText">
-                                {album.name}
-                            </h3>
-                            <span className="SongsCount">
-                                {album.songs.length} songs
-                            </span>
-                        </li>
+                        <Link to={`/${album.id}`}  key={album.id.toString()}>
+                            <li className="AlbumsListItem">
+                                <img alt={album.name} src={album.coverImage} />
+                                <h3 className="AlbumsListItemText">
+                                    {album.name}
+                                </h3>
+                                <span className="SongsCount">
+                                    {album.songs.length} songs
+                                </span>
+                            </li>
+                        </Link>
                     )
                 })}
             </ul>

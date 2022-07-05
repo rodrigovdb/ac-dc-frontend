@@ -2,6 +2,15 @@ ul.AlbumsList {
     list-style-type: none;
 }
 
+ul.AlbumsList a, ul.AlbumList a:visited, ul.AlbumList a:active{
+    text-decoration: none;
+    color: #555;
+}
+
+ul.AlbumsList a:hover{
+    color: #000;
+}
+
 ul.AlbumsList li.AlbumsListItem{
     padding: 10px;
     border: solid 1px #ccc;
