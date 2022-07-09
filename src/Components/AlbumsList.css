@@ -1,5 +1,7 @@
-ul.AlbumsList {
+ul.AlbumsList{
     list-style-type: none;
+    padding: 0px;
+    margin: 0px;
 }
 
 ul.AlbumsList a, ul.AlbumList a:visited, ul.AlbumList a:active{
@@ -9,33 +11,41 @@ ul.AlbumsList a, ul.AlbumList a:visited, ul.AlbumList a:active{
 
 ul.AlbumsList a:hover{
     color: #000;
+    text-decoration: underline;
 }
 
 ul.AlbumsList li.AlbumsListItem{
     padding: 10px;
-    border: solid 1px #ccc;
-    margin: 10px 0px;
-    border-radius: 10px;
-    clear: both;
-    height: 50px;
+    border-radius: 5px;
+    border: solid 1px #fff;
+    min-height: 100px;
 }
 
 ul.AlbumsList li.AlbumsListItem:hover{
-    background-color: #efefef;
+    border-radius: 5px;
+    border: solid 1px #ccc;
 }
 
-.AlbumsList .AlbumsListItem img{
+ul.AlbumsList li.AlbumsListItem img{
+    width: 100px;
     float: left;
-    height: 50px;
 }
 
-.AlbumsList .AlbumsListItem h3.AlbumsListItemText {
-    float: left;
-    margin-top: 15px;
-    margin-left: 10px;
+ul.AlbumsList li.AlbumsListItem div.AlbumListContent{
+    margin-left: 110px;
 }
 
-.AlbumsList .AlbumsListItem .SongsCount {
-    float: right;
-    margin-top: 17px;
+ul.AlbumsList li.AlbumsListItem h3{
+    margin: 0px;
+    padding: 0px;
+}
+
+ul.AlbumsList li.AlbumsListItem h4{
+    margin: 10px 0px;
+    padding: 0px;
+}
+
+ul.AlbumsList li.AlbumsListItem h5{
+    margin: 2px 0px;
+    padding: 0px;
 }

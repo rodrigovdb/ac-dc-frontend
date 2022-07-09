@@ -22,13 +22,18 @@ export default function AlbumsList() {
                         <Link to={`/ac-dc-frontend/${album.id}`}  key={album.id.toString()}>
                             <li className="AlbumsListItem">
                                 <img alt={album.name} src={album.coverImage} />
-                                <h3 className="AlbumsListItemText">
-                                    {album.name}
-                                </h3>
-                                <span className="SongsCount">
-                                    <div>{album.songs.length} songs</div>
-                                    <div>{album.totalDuration}</div>
-                                </span>
+
+                                <div class="AlbumListContent">
+                                    <h3 className="AlbumsListItemName">
+                                        {album.name}
+                                    </h3>
+                                    <h4 className="AlbumsListItemYear">
+                                        {album.year}
+                                    </h4>
+                                    <h5 className="SongsCount">
+                                        {album.totalDuration}, {album.songs.length} songs
+                                    </h5>
+                                </div>
                             </li>
                         </Link>
                     )
