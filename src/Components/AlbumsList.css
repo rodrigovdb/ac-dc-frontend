@@ -24,6 +24,7 @@ ul.AlbumsList li.AlbumsListItem{
 ul.AlbumsList li.AlbumsListItem:hover{
     border-radius: 5px;
     border: solid 1px #ccc;
+    background-color: #efefef;
 }
 
 ul.AlbumsList li.AlbumsListItem img{
@@ -48,4 +49,5 @@ ul.AlbumsList li.AlbumsListItem h4{
 ul.AlbumsList li.AlbumsListItem h5{
     margin: 2px 0px;
     padding: 0px;
+    float: right;
 }

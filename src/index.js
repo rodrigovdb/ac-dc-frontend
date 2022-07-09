@@ -11,15 +11,17 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <h1 id="pageTitle">AC/DC Studio Albums</h1>
+      <div id="ApplicationContainer">
+        <h1 id="pageTitle">AC/DC Studio Albums</h1>
 
-      <ApolloProvider client={client}>
-        <App />
-      </ApolloProvider>
+        <ApolloProvider client={client}>
+          <App />
+        </ApolloProvider>
 
-      <footer id="pageFooter">
-        by <a href="https://github.com/rodrigovdb">@rodrigovdb</a>
-      </footer>
+        <footer id="pageFooter">
+          by <a href="https://github.com/rodrigovdb">@rodrigovdb</a>
+        </footer>
+      </div>
     </BrowserRouter>
   </React.StrictMode>
 );

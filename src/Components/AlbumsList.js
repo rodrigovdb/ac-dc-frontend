@@ -31,7 +31,8 @@ export default function AlbumsList() {
                                         {album.year}
                                     </h4>
                                     <h5 className="SongsCount">
-                                        {album.totalDuration}, {album.songs.length} songs
+                                        <div>{album.totalDuration}</div>
+                                        <div>{album.songs.length} songs</div>
                                     </h5>
                                 </div>
                             </li>

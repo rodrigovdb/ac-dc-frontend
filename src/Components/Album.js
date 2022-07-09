@@ -22,10 +22,10 @@ export default function Album(){
         return(
             <div className="albumDetails">
                 <img alt={album.name} src={album.coverImage} className="albumImage" />
-                <h2>{album.name}</h2>
+                <h1>{album.name}</h1>
 
-                <h4>Year: {album.year}</h4>
-                <h4>Duration: {album.totalDuration}</h4>
+                <h3>Year: {album.year}</h3>
+                <h3>Duration: {album.totalDuration}</h3>
 
                 <div className="albumSongs">
                     <ul>

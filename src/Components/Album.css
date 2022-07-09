@@ -5,6 +5,11 @@
 .albumDetails img {
     float: left;
     margin-right: 20px;
+    width: 300px;
+}
+
+.albumDetails h1{
+    padding-top: 50px;
 }
 
 .albumDetails .albumSongs{
