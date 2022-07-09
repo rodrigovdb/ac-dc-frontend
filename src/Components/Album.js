@@ -24,13 +24,18 @@ export default function Album(){
                 <img alt={album.name} src={album.coverImage} className="albumImage" />
                 <h2>{album.name}</h2>
 
+                <h4>Year: {album.year}</h4>
+                <h4>Duration: {album.totalDuration}</h4>
+
                 <div className="albumSongs">
                     <ul>
                         {album.songs.map(song => {
                             track++
                             return(
                                 <li key={song.id}>
-                                    {track}. {song.name}
+                                    <span>{song.sort}. </span>
+                                    <span>{song.name}</span>
+                                    <span className="songDuration">{song.duration}</span>
                                 </li>
                             )
                         })}

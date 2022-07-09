@@ -26,7 +26,8 @@ export default function AlbumsList() {
                                     {album.name}
                                 </h3>
                                 <span className="SongsCount">
-                                    {album.songs.length} songs
+                                    <div>{album.songs.length} songs</div>
+                                    <div>{album.totalDuration}</div>
                                 </span>
                             </li>
                         </Link>
