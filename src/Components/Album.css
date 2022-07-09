@@ -5,6 +5,7 @@
 .albumDetails img {
     float: left;
     margin-right: 20px;
+    margin-bottom: 20px;
     width: 300px;
 }
 
@@ -13,7 +14,7 @@
 }
 
 .albumDetails .albumSongs{
-    float: left;
+    clear: both;
 }
 
 .albumDetails .albumSongs ul{
