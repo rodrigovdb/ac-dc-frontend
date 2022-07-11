@@ -6,7 +6,7 @@ import Loading from './Loading';
 
 import './Album.css';
 
-export default function Album(){
+export default function ShowAlbum(){
     const {id} = useParams()
     const { error, loading, data } = useAlbum(id);
 

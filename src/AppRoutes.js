@@ -4,12 +4,14 @@ import { Route, Routes } from "react-router-dom";
 import { ApolloProvider } from '@apollo/client';
 import { BrowserRouter } from 'react-router-dom';
 
+// This is the ApolloClient configured
 import client from './client'
 
 import AlbumsList from './Components/AlbumsList';
-import Album from './Components/Album';
+import ShowAlbum from './Components/ShowAlbum';
+import AlbumForm from './Components/AlbumForm';
 
-const AppRoutes = () => {
+export default function AppRoutes() {
      return (
         <BrowserRouter>
             <ApolloProvider client={client}>
@@ -20,12 +22,11 @@ const AppRoutes = () => {
             
                     <Route path="/ac-dc-frontend/albums">
                         <Route index element={<AlbumsList />} />
-                        <Route strict exact path="/ac-dc-frontend/albums/:id" element={<Album />}/>
+                        <Route strict exact path="/ac-dc-frontend/albums/new" element={<AlbumForm />}/>
+                        <Route strict exact path="/ac-dc-frontend/albums/:id" element={<ShowAlbum />}/>
                     </Route>
                 </Routes>
             </ApolloProvider>
         </BrowserRouter>
      );
  }
-
- export default AppRoutes;
