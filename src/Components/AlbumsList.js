@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+
 import { useAlbums } from '../hooks/useAlbums';
+import Loading from './Loading'
 
 import './AlbumsList.css';
 
@@ -9,7 +11,7 @@ export default function AlbumsList() {
     // console.log({ error, loading, data})
 
     if(loading){
-        return <div>spinner...</div>
+        return <Loading />
     }
     if(error){
         return <div>something went wrong</div>
