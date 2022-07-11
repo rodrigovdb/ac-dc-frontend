@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import { useAlbums } from '../hooks/useAlbums';
-import Loading from './Loading'
+import Loading from './Loading';
 
 import './AlbumsList.css';
 

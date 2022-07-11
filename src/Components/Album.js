@@ -1,6 +1,8 @@
 import React from 'react'
 import { useParams } from 'react-router';
+
 import { useAlbum } from '../hooks/useAlbum'
+import Loading from './Loading';
 
 import './Album.css';
 
@@ -9,7 +11,7 @@ export default function Album(){
     const { error, loading, data } = useAlbum(id);
 
     if(loading){
-        return <div>spinner...</div>
+        return <Loading />
     }
     if(error){
         console.log(error)
