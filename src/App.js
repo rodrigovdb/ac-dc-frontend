@@ -14,13 +14,14 @@ function App(){
   return(
     <div className="App">
       <Routes>
-        <Route path="/">
+        <Route path="/ac-dc-frontend">
           <Route index element={<AlbumsList />} />
         </Route>
-        <Route path="/albums">
-          <Route index element={<AlbumsList />} />
-          <Route strict exact path="/albums/:id" element={<Album />}/>
-        </Route>
+
+        <Route path="/ac-dc-frontend/albums">
+            <Route index element={<AlbumsList />} />
+            <Route strict exact path="/ac-dc-frontend/albums/:id" element={<Album />}/>
+          </Route>
       </Routes>
     </div>
   )

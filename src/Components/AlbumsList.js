@@ -19,7 +19,7 @@ export default function AlbumsList() {
             <ul className="AlbumsList">
                 {data.albums.map(album => {
                     return (
-                        <Link to={`/albums/${album.id}`}  key={album.id.toString()}>
+                        <Link to={`/ac-dc-frontend/albums/${album.id}`}  key={album.id.toString()}>
                             <li className="AlbumsListItem">
                                 <img alt={album.name} src={album.coverImage} />
 
