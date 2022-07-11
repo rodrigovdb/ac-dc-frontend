@@ -4,7 +4,7 @@ import { useParams } from 'react-router';
 import { useAlbum } from '../hooks/useAlbum'
 import Loading from './Loading';
 
-import './Album.css';
+import './ShowAlbum.css';
 
 export default function ShowAlbum(){
     const {id} = useParams()
