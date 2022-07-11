@@ -19,11 +19,11 @@ export default function AlbumsList() {
             <ul className="AlbumsList">
                 {data.albums.map(album => {
                     return (
-                        <Link to={`/ac-dc-frontend/${album.id}`}  key={album.id.toString()}>
+                        <Link to={`/albums/${album.id}`}  key={album.id.toString()}>
                             <li className="AlbumsListItem">
                                 <img alt={album.name} src={album.coverImage} />
 
-                                <div class="AlbumListContent">
+                                <div className="AlbumListContent">
                                     <h3 className="AlbumsListItemName">
                                         {album.name}
                                     </h3>
