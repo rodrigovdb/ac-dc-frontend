@@ -17,6 +17,7 @@ export const LOAD_ALBUM = gql`
         }
     }   
 `
+
 export const useAlbum = (id) => {
     const { error, loading, data } = useQuery(LOAD_ALBUM, {
         variables: {
