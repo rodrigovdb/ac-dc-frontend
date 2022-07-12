@@ -6,6 +6,29 @@ import Loading from './Loading';
 
 import './AlbumsList.css';
 
+function AlbumRow(props) {
+    return (
+        <Link to={`/ac-dc-frontend/albums/${props.id}`}>
+            <li className="AlbumsListItem">
+                <img alt={props.name} src={props.coverImage} />
+
+                <div className="AlbumListContent">
+                    <h3 className="AlbumsListItemName">
+                        {props.name}
+                    </h3>
+                    <h4 className="AlbumsListItemYear">
+                        {props.year}
+                    </h4>
+                    <h5 className="SongsCount">
+                        <div>{props.totalDuration}</div>
+                        <div>{props.songsLength} songs</div>
+                    </h5>
+                </div>
+            </li>
+        </Link>
+    )
+}
+
 export default function AlbumsList() {
     const { error, loading, data } = useAlbums()
     // console.log({ error, loading, data})
@@ -19,28 +42,15 @@ export default function AlbumsList() {
     if(data){
         return(
             <ul className="AlbumsList">
-                {data.albums.map(album => {
-                    return (
-                        <Link to={`/ac-dc-frontend/albums/${album.id}`}  key={album.id.toString()}>
-                            <li className="AlbumsListItem">
-                                <img alt={album.name} src={album.coverImage} />
-
-                                <div className="AlbumListContent">
-                                    <h3 className="AlbumsListItemName">
-                                        {album.name}
-                                    </h3>
-                                    <h4 className="AlbumsListItemYear">
-                                        {album.year}
-                                    </h4>
-                                    <h5 className="SongsCount">
-                                        <div>{album.totalDuration}</div>
-                                        <div>{album.songs.length} songs</div>
-                                    </h5>
-                                </div>
-                            </li>
-                        </Link>
-                    )
-                })}
+                { data.albums.map((album) => <AlbumRow
+                    key={album.id.toString()}
+                    id={album.id}
+                    name={album.name}
+                    year={album.year}
+                    coverImage={album.coverImage}
+                    totalDuration={album.totalDuration}
+                    songsLength={album.songs.length}
+                />) }
             </ul>
         )
     }
