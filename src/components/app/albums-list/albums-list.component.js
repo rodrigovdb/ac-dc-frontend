@@ -5,7 +5,6 @@ import AlbumsListItem from './albums-list-item/albums-list-item.component';
 import './albums-list.component.css'
 
 const AlbumsList = (albums) => {
-    //console.log(albums.albums);
 
     return(
         <div className="albumsList">
