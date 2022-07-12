@@ -1,0 +1,18 @@
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+footer a, footer a:active, footer a:visited{
+    color: #000;
+}
+
+footer a:hover {
+    text-decoration: none;
+    color: #c00;
+}
