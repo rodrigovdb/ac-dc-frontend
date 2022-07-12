@@ -1,7 +1,8 @@
 import React from 'react';
 
-//import '../../../interfaces/album.interface';
 import AlbumsListItem from './albums-list-item/albums-list-item.component';
+
+import './albums-list.component.css'
 
 const AlbumsList = (albums) => {
     //console.log(albums.albums);

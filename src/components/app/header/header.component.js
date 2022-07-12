@@ -16,6 +16,10 @@ const Header: React.FC = () => {
                 </li>
             </ul>
         </div>
+
+        <div>
+            <h1>AC/DC Studio Albums</h1>
+        </div>
     </header>
    );
 }

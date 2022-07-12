@@ -1,0 +1,25 @@
+.albumListItem{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    border: solid 1px #fff;
+    min-height: 100px;
+}
+
+.albumListItem:hover{
+    border-radius: 5px;
+    border: solid 1px #ccc;
+    background-color: #efefef;
+}
+
+.albumListItem img {
+    width: 100px;
+    height: 100px;
+}
+
+.albumListItem h1, .albumListItem h2 {
+    margin: 5px 0px;
+    padding: 0px;
+}
