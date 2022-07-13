@@ -1,4 +1,4 @@
-export default class Album {
+class Album {
     constructor(id, name, year, coverImage, totalDuration, songs = []){
         this.id = id;
         this.name = name;
@@ -18,3 +18,5 @@ export default class Album {
             object.songs);
     }
 }
+
+export default Album;
