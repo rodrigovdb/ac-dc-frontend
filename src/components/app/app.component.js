@@ -7,6 +7,7 @@ import client from '../../common/client';
 import Header from './header/header.component';
 import Footer from './footer/footer.component';
 import AlbumsPage from '../../pages/albums/albums.page';
+import AlbumsForm from '../../pages/albums/albums-form.page';
 
 import './app.component.css'
 
@@ -19,6 +20,12 @@ const App = () => {
                 <Routes>
                     <Route path="/ac-dc-frontend/">
                         <Route index element={<AlbumsPage />} />
+                    </Route>
+
+
+                    <Route path="/ac-dc-frontend/albums">
+                        <Route index element={<AlbumsPage />} />
+                        <Route strict exact path="/ac-dc-frontend/albums/new" element={<AlbumsForm />}/>
                     </Route>
                 </Routes>
 

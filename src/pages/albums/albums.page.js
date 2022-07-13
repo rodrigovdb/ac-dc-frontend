@@ -2,7 +2,7 @@ import React from 'react';
 
 import { useAlbums } from '../../hooks/albums/useAlbums';
 import Album from '../../models/album.model';
-import AlbumsList from '../../components/app/albums-list/albums-list.component';
+import AlbumsList from '../../components/app/albums/albums-list/albums-list.component';
 import Loading from '../../components/app/loading/loading.component';
 
 const AlbumsPage = () => {

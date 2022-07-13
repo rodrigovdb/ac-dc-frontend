@@ -1,0 +1,12 @@
+.formFieldset{
+    border-radius: 5px;
+}
+
+.fieldRow{
+    padding: 10px 0px;
+}
+
+.fieldRow label{
+    display: block;
+    font-weight: bold;
+}

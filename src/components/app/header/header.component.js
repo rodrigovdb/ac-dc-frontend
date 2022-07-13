@@ -14,6 +14,9 @@ const Header: React.FC = () => {
                 <li>
                     <NavLink to="/ac-dc-frontend/albums">Albums</NavLink>
                 </li>
+                <li>
+                    <NavLink to="/ac-dc-frontend/albums/new">New Album</NavLink>
+                </li>
             </ul>
         </div>
 
