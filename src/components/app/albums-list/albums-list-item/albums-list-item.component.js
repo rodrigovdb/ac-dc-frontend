@@ -8,19 +8,22 @@ const AlbumsListItem:ReactFC = (props) => {
         <Link to={`/ac-dc-frontend/albums/${props.id}`}>
             <div className="albumListItem">
 
-                <div className="column">
+                <div className="imageContainer">
                     <img alt={props.name} src={props.coverImage} />
                 </div>
 
-                <div className="column">
-                    <h1>{props.name}</h1>
+                <div className="infoContainer">
+                    <div className="albumTitleAndYear">
+                        <h2>{props.name}</h2>
 
-                    <h2>{props.year}</h2>
-                </div>
+                        <h4>{props.year}</h4>
+                    </div>
 
-                <div className="column">
-                    <h5>{props.totalDuration}</h5>
-                    <h5>{props.songsLength} songs</h5>
+
+                    <div className="albumDurationAndTracks">
+                        <h5>{props.totalDuration}</h5>
+                        <h5>{props.songsLength} songs</h5>
+                    </div>
                 </div>
             </div>
         </Link>

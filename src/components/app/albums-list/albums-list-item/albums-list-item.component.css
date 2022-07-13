@@ -1,11 +1,11 @@
 .albumListItem{
     display: flex;
-    justify-content: space-between;
     align-items: center;
     padding: 10px;
     border-radius: 5px;
     border: solid 1px #fff;
     min-height: 100px;
+    gap: 20px;
 }
 
 .albumListItem:hover{
@@ -14,12 +14,18 @@
     background-color: #efefef;
 }
 
-.albumListItem img {
+.albumListItem .imageContainer img {
     width: 100px;
     height: 100px;
 }
 
-.albumListItem h1, .albumListItem h2 {
+.albumListItem .infoContainer{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.albumListItem h2, .albumListItem h4 {
     margin: 5px 0px;
     padding: 0px;
 }
