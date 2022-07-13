@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { useAlbums } from '../../hooks/albums/useAlbums';
+import Album from '../../models/album.model';
 import AlbumsList from '../../components/app/albums-list/albums-list.component';
 import Loading from '../../components/app/loading/loading.component';
 
@@ -14,9 +15,9 @@ const AlbumsPage = () => {
         return <div>something went wrong: {error}</div>
     }
     if(data){
-        //console.log(data);
+        const albums = data.albums.map((album) => Album.fromJson(album));
 
-        return <AlbumsList albums={data.albums || []} />
+        return <AlbumsList albums={albums || []} />
     }
 };
 

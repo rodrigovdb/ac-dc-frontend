@@ -1,7 +1,5 @@
 import { useQuery, gql } from "@apollo/client"
 
-import '../../interfaces/album.interface';
-
 const LOAD_ALBUMS = gql`
     query {
         albums {
