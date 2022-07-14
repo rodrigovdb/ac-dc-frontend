@@ -9,13 +9,7 @@ const Header: React.FC = () => {
         <div>
             <ul>
                 <li>
-                    <NavLink to="/ac-dc-frontend/">Home</NavLink>
-                </li>
-                <li>
                     <NavLink to="/ac-dc-frontend/albums">Albums</NavLink>
-                </li>
-                <li>
-                    <NavLink to="/ac-dc-frontend/albums/new">New Album</NavLink>
                 </li>
             </ul>
         </div>
