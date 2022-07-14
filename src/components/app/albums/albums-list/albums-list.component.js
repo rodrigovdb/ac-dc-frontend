@@ -6,9 +6,11 @@ import './albums-list.component.css'
 
 const AlbumsList = (albums) => {
 
+    albums = albums.albums
+
     return(
         <div className="albumsList">
-            {albums.albums.map((album) => <AlbumsListItem
+            {albums.map((album) => <AlbumsListItem
                 key={album.id}
                 id={album.id}
                 name={album.name}

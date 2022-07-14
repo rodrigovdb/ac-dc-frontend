@@ -1,0 +1,13 @@
+.albumsShowSong{
+    display: flex;
+    gap: 10px;
+    border: solid 1px #efefef;
+    padding: 10px;
+    border-radius: 1px;
+}
+
+.albumsShowSong .songNameAndDurationContainer{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
