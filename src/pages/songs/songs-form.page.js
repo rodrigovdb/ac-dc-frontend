@@ -2,11 +2,10 @@ import React from 'react';
 import { useParams } from 'react-router';
 
 import { useAlbum } from '../../hooks/albums/useAlbum';
-import Album from '../../models/album.model';
-import AlbumsShow from '../../components/app/albums/albums-show/albums-show.component';
+import SongsForm from '../../components/app/songs/songs-form/songs-form.component'
 import Loading from '../../components/app/loading/loading.component';
 
-const AlbumsShowPage = () => {
+const SongsFormPage = () => {
     const {id} = useParams()
     const { error, loading, data } = useAlbum(id);
 
@@ -17,10 +16,12 @@ const AlbumsShowPage = () => {
         return <div>something went wrong: {error}</div>
     }
     if(data){
-        const album = Album.fromJson(data.album);
-
-        return <AlbumsShow album={album} />
+        return(
+            <div className="songsFormPage">
+                <SongsForm album={data.album} />
+            </div>
+        )
     }
 };
 
-export default AlbumsShowPage;
+export default SongsFormPage;
