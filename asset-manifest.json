@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/ac-dc-frontend/static/css/main.c66b1134.css",
-    "main.js": "/ac-dc-frontend/static/js/main.05a1f911.js",
+    "main.css": "/ac-dc-frontend/static/css/main.fd41d884.css",
+    "main.js": "/ac-dc-frontend/static/js/main.f12f96e0.js",
     "index.html": "/ac-dc-frontend/index.html",
-    "main.c66b1134.css.map": "/ac-dc-frontend/static/css/main.c66b1134.css.map",
-    "main.05a1f911.js.map": "/ac-dc-frontend/static/js/main.05a1f911.js.map"
+    "main.fd41d884.css.map": "/ac-dc-frontend/static/css/main.fd41d884.css.map",
+    "main.f12f96e0.js.map": "/ac-dc-frontend/static/js/main.f12f96e0.js.map"
   },
   "entrypoints": [
-    "static/css/main.c66b1134.css",
-    "static/js/main.05a1f911.js"
+    "static/css/main.fd41d884.css",
+    "static/js/main.f12f96e0.js"
   ]
 }
