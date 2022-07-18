@@ -17,28 +17,30 @@ const App = () => {
     return(
         <ApolloProvider client={client}>
             <BrowserRouter>
-                <Header />
+                <div className="container mx-auto">
+                    <Header />
 
-                <Routes>
-                    <Route path="/ac-dc-frontend/">
-                        <Route index element={<AlbumsPage />} />
-                    </Route>
+                    <Routes>
+                        <Route path="/ac-dc-frontend/">
+                            <Route index element={<AlbumsPage />} />
+                        </Route>
 
-                    <Route path="/ac-dc-frontend/albums">
-                        <Route index element={<AlbumsPage />} />
-                        <Route strict exact path="/ac-dc-frontend/albums/new" element={<AlbumsFormPage />}/>
+                        <Route path="/ac-dc-frontend/albums">
+                            <Route index element={<AlbumsPage />} />
+                            <Route strict exact path="/ac-dc-frontend/albums/new" element={<AlbumsFormPage />}/>
 
-                        <Route path="/ac-dc-frontend/albums/:id">
-                            <Route index element={<AlbumsShowPage />} />
+                            <Route path="/ac-dc-frontend/albums/:id">
+                                <Route index element={<AlbumsShowPage />} />
 
-                            <Route path="/ac-dc-frontend/albums/:id/songs">
-                                <Route strict exact path="/ac-dc-frontend/albums/:id/songs/new" element={<SongsFormPage />}/>
+                                <Route path="/ac-dc-frontend/albums/:id/songs">
+                                    <Route strict exact path="/ac-dc-frontend/albums/:id/songs/new" element={<SongsFormPage />}/>
+                                </Route>
                             </Route>
                         </Route>
-                    </Route>
-                </Routes>
+                    </Routes>
 
-                <Footer />
+                    <Footer />
+                </div>
            </BrowserRouter>
         </ApolloProvider>
     );
