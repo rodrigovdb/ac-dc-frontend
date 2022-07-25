@@ -10,7 +10,9 @@ const LOAD_ALBUMS = gql`
             year
             songs {
                 id
+                sort
                 name
+                duration
             }
         }
     }

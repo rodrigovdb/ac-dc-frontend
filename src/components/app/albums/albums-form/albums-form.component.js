@@ -72,7 +72,7 @@ const AlbumsForm = (album) => {
     return(
         <div className="albumsForm">
             <form onSubmit={handleSubmit(onSubmit)}>
-                <h3>Album</h3>
+                <h3>Create new Album</h3>
                 
                 <div className="fieldRow">
                     <label to="name">Name: </label>

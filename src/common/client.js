@@ -1,5 +1,5 @@
 import { ApolloClient, InMemoryCache, from, HttpLink } from "@apollo/client";
-import { ErrorLink, onError } from '@apollo/client/link/error'  
+import { onError } from '@apollo/client/link/error'  
 
 import settings from '../config/settings';
   

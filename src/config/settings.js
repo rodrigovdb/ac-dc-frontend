@@ -1,5 +1,5 @@
 const settings = {
-    apiUrl: 'https://ac-dc.herokuapp.com/graphql'
+    apiUrl: 'http://localhost:3000/graphql'
 };
 
 export default settings;

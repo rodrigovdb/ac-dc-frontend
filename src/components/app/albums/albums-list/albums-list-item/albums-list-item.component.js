@@ -19,7 +19,6 @@ const AlbumsListItem:ReactFC = (props) => {
                         <h4>{props.year}</h4>
                     </div>
 
-
                     <div className="albumDurationAndTracks">
                         <h5>{props.totalDuration}</h5>
                         <h5>{props.songsLength} songs</h5>
