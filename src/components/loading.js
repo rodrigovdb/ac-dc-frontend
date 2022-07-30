@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './loading.component.css';
+// import './loading.component.css';
 
 export default function Loading() {
     return(
