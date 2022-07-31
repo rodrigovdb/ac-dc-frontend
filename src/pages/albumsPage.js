@@ -1,9 +1,11 @@
 import { List } from 'antd';
+
 import React from 'react';
 
 import { useAlbums } from '../hooks/albums/useAlbums';
 import Loading from '../components/loading';
 import AlbumsListItem from '../components/albumsListItem';
+import AlbumsForm from '../components/albumsForm';
 
 import './albumsPage.css';
 
@@ -22,6 +24,7 @@ const AlbumsPage = () => {
         return(
             <div className='albumsPage'>
                 <List
+                    header={<AlbumsForm />}
                     itemLayout="horizontal"
                     size="large"
                     bordered
