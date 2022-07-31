@@ -40,6 +40,7 @@ const AlbumsForm = () => {
                     labelCol={{ span: 6 }}
                     wrapperCol={{ span: 16 }}
                     onFinish={onFinish}
+                    onFinishFailed={onFinishFailed}
                     autoComplete="off"
                     >
                     <Form.Item
