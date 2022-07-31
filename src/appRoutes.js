@@ -11,10 +11,11 @@ import Footer from './components/footer';
 import './appRoutes.css'
 
 const AppRoutes = () => {
+
     return(
         <ApolloProvider client={client}>
             <BrowserRouter>
-                <Layout className="appRoutes">
+                {/* <Layout className="appRoutes"> */}
                     <PageHeader title="AC/DC" subTitle="Studio Albums" />
 
                     <Routes>
@@ -23,21 +24,21 @@ const AppRoutes = () => {
                         </Route>
 
                         <Route path="/ac-dc-frontend/albums">
-                            <Route index element={<AlbumsPage />} />
-                            {/*
-                            <Route strict exact path="/ac-dc-frontend/albums/new" element={<AlbumsFormPage />}/>
-                            <Route path="/ac-dc-frontend/albums/:id">
-                            <Route index element={<AlbumsShowPage />} />
+                            {/* <Route index element={<AlbumsPage />} /> */}
+
+                            {/* <Route strict exact path="/ac-dc-frontend/albums/new" element={<AlbumsFormPage />}/>
+                                <Route path="/ac-dc-frontend/albums/:id">
+                                    <Route index element={<AlbumsShowPage />} />
                             
-                            <Route path="/ac-dc-frontend/albums/:id/songs">
-                            <Route strict exact path="/ac-dc-frontend/albums/:id/songs/new" element={<SongsFormPage />}/>
-                            </Route>
-                        </Route> */}
+                                    <Route path="/ac-dc-frontend/albums/:id/songs">
+                                        <Route strict exact path="/ac-dc-frontend/albums/:id/songs/new" element={<SongsFormPage />}/>
+                                    </Route>
+                            </Route> */}
                         </Route>
                     </Routes>
 
                     <Footer />
-                </Layout>
+                {/* </Layout> */}
             </BrowserRouter>
         </ApolloProvider>
     )

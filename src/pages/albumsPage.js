@@ -7,6 +7,11 @@ import AlbumsListItem from '../components/albumsListItem';
 
 import './albumsPage.css';
 
+const albums = [
+    {name: 'Highway to Hell'},
+    {name: 'Live'}
+]
+
 const AlbumsPage = () => {
     const { error, loading, data } = useAlbums()
 
@@ -19,11 +24,10 @@ const AlbumsPage = () => {
     if(data){
         const albums = data.albums;
 
-        console.log(albums[0])
-
         return(
             <div className='albumsPage'>
                 <List
+                    itemLayout="horizontal"
                     size="large"
                     bordered
                     dataSource={albums}
