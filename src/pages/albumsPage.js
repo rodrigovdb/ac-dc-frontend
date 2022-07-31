@@ -7,11 +7,6 @@ import AlbumsListItem from '../components/albumsListItem';
 
 import './albumsPage.css';
 
-const albums = [
-    {name: 'Highway to Hell'},
-    {name: 'Live'}
-]
-
 const AlbumsPage = () => {
     const { error, loading, data } = useAlbums()
 
