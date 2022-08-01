@@ -69,11 +69,12 @@ const AlbumsForm = () => {
                         rules={[
                             {
                                 required: true,
-                                message: "Please input a song name"
+                                message: "Please input an album name"
                             },
                         ]}
                         >
                         <Input
+                            placeholder="High Voltage"
                             onChange={(e) => setFormState({
                                 ...formState,
                                 name: e.target.value
@@ -92,6 +93,7 @@ const AlbumsForm = () => {
                         ]}
                         >
                         <InputNumber
+                            placeholder="1976"
                             min={1976}
                             max={new Date().getFullYear()}
                             onChange={(e) => setFormState({
@@ -116,6 +118,7 @@ const AlbumsForm = () => {
                         ]}
                         >
                         <Input
+                            placeholder="http://www.url.com/image.png"
                             onChange={(e) => setFormState({
                                 ...formState,
                                 coverImage: e.target.value
