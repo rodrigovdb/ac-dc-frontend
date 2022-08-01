@@ -1,22 +1,46 @@
-import { Button, Modal, Form, Input, InputNumber } from 'antd';
+import { Alert, Button, Modal, Form, Input, InputNumber } from 'antd';
 
 import React from 'react';
 import { useState } from 'react';
+import { Navigate } from 'react-router-dom';
+
+import { useAlbumCreate} from '../hooks/albums/useAlbumCreate';
+import Loading from './loading';
 
 const AlbumsForm = () => {
     const [showForm, setShowForm] = useState(false)
+    const [formState, setFormState] = useState({
+        name: '',
+        year: null,
+        coverImage: ''
+    })
 
     const showModal = () => {
         setShowForm(true);
     }
 
-    const onFinish = (values) => {
-        console.log('Success', values);
+    const [albumCreate, {data, loading, error}] = useAlbumCreate(
+        formState.name,
+        formState.year,
+        formState.coverImage
+    )
+    if(loading){
+        return <Loading />;
     }
-
-    // Nothing being done here, but it can be used when the validation fails.
-    const onFinishFailed = (errorInfo) => {
-        console.log('Failure', errorInfo);
+    if(error){
+        return(
+            <div>
+                <Alert
+                    message="Error"
+                    description={error.message}
+                    type="error"
+                    showIcon
+                />
+            </div>
+        );
+    }
+    if(data){
+        return <Navigate replace to={`/ac-dc-frontend/albums/${data.albumCreate.id}`} />
     }
 
     return(
@@ -34,15 +58,13 @@ const AlbumsForm = () => {
                 visible={showForm}
                 onCancel={() => { setShowForm(false) } }
                 footer={[]}
+            >
+                <form
+                    onSubmit={(e) => {
+                        e.preventDefault();
+                        albumCreate()
+                    }}
                 >
-                <Form
-                    name="formCreateAlbum"
-                    labelCol={{ span: 6 }}
-                    wrapperCol={{ span: 16 }}
-                    onFinish={onFinish}
-                    onFinishFailed={onFinishFailed}
-                    autoComplete="off"
-                    >
                     <Form.Item
                         label="Name"
                         name="name"
@@ -53,7 +75,12 @@ const AlbumsForm = () => {
                             },
                         ]}
                         >
-                        <Input />
+                        <Input
+                            onChange={(e) => setFormState({
+                                ...formState,
+                                name: e.target.value
+                            })}
+                        />
                     </Form.Item>
 
                     <Form.Item
@@ -66,7 +93,12 @@ const AlbumsForm = () => {
                             },
                         ]}
                         >
-                        <InputNumber />
+                        <Input
+                            onChange={(e) => setFormState({
+                                ...formState,
+                                year: e.target.value
+                            })}
+                        />
                     </Form.Item>
 
                     <Form.Item
@@ -79,7 +111,12 @@ const AlbumsForm = () => {
                             },
                         ]}
                         >
-                        <Input />
+                        <Input
+                            onChange={(e) => setFormState({
+                                ...formState,
+                                coverImage: e.target.value
+                            })}
+                        />
                     </Form.Item>
 
                     <Form.Item
@@ -92,7 +129,7 @@ const AlbumsForm = () => {
                             Submit
                         </Button>
                     </Form.Item>
-                </Form>
+                </form>
             </Modal>
         </div>
     )
