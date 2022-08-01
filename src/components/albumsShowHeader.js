@@ -7,7 +7,7 @@ const { Title } = Typography;
 const AlbumsShowHeader = (props) => {
     return(
         <div>
-            <Row gutter={16}>
+            <Row>
                 <Col span={24}>
                     <Button
                         href="/ac-dc-frontend/albums"
@@ -34,6 +34,11 @@ const AlbumsShowHeader = (props) => {
                     <Title className="albumTotalDuration" level={5}>{props.totalDuration} Minutes</Title>
                     <Title className="albumSongs" level={5}>{props.songsCount} Songs</Title>
                 </Col>
+            </Row>
+
+            <Row>
+                <Col>&nbsp;</Col>
+                <Col span={24}><Title level={3}>Songs</Title></Col>
             </Row>
         </div>
     )

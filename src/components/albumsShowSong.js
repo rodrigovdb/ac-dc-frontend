@@ -6,7 +6,7 @@ const AlbumsShowSong = (props) => {
     return(
         <List.Item>
             <List.Item.Meta
-                    title={props.name}
+                    title={`${props.sort}. ${props.name}`}
             />
             
             <div>{props.duration}</div>

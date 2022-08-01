@@ -4,6 +4,7 @@ import React from 'react';
 
 import AlbumsShowHeader from './albumsShowHeader';
 import AlbumsShowSong from './albumsShowSong';
+import SongsForm from './songsForm';
 
 const AlbumsShow = (props) =>{
     return(
@@ -16,11 +17,12 @@ const AlbumsShow = (props) =>{
                     totalDuration={props.totalDuration}
                     songsCount={props.songs.length}
                 />}
+                footer={<SongsForm albumId={props.id} />}
                 itemLayout="horizontal"
                 size="large"
                 bordered
                 dataSource={props.songs}
-                renderItem={(song) => (<AlbumsShowSong name={song.name} duration={song.duration} />)}
+                renderItem={(song) => (<AlbumsShowSong name={song.name} duration={song.duration} sort={song.sort} />)}
             />
         </div>
     )
