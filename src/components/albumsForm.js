@@ -59,11 +59,8 @@ const AlbumsForm = () => {
                 onCancel={() => { setShowForm(false) } }
                 footer={[]}
             >
-                <form
-                    onSubmit={(e) => {
-                        e.preventDefault();
-                        albumCreate()
-                    }}
+                <Form
+                    onFinish={() => { albumCreate() }}
                 >
                     <Form.Item
                         label="Name"
@@ -80,7 +77,7 @@ const AlbumsForm = () => {
                                 ...formState,
                                 name: e.target.value
                             })}
-                        />
+                            />
                     </Form.Item>
 
                     <Form.Item
@@ -90,13 +87,15 @@ const AlbumsForm = () => {
                             {
                                 required: true,
                                 message: "Please input an year"
-                            },
+                            }
                         ]}
                         >
-                        <Input
+                        <InputNumber
+                            min={1976}
+                            max={new Date().getFullYear()}
                             onChange={(e) => setFormState({
                                 ...formState,
-                                year: e.target.value
+                                year: e
                             })}
                         />
                     </Form.Item>
@@ -109,6 +108,10 @@ const AlbumsForm = () => {
                                 required: true,
                                 message: "Please input an URL for cover image"
                             },
+                            {
+                                type: 'url',
+                                warningOnly: true
+                            }
                         ]}
                         >
                         <Input
@@ -116,7 +119,7 @@ const AlbumsForm = () => {
                                 ...formState,
                                 coverImage: e.target.value
                             })}
-                        />
+                            />
                     </Form.Item>
 
                     <Form.Item
@@ -129,7 +132,7 @@ const AlbumsForm = () => {
                             Submit
                         </Button>
                     </Form.Item>
-                </form>
+                </Form>
             </Modal>
         </div>
     )
