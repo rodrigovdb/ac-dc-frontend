@@ -2,7 +2,7 @@ import { List } from 'antd';
 
 import React from 'react';
 
-import { useAlbums } from '../hooks/albums/useAlbums';
+import { useAlbums } from '../hooks/useAlbums';
 import Loading from '../components/loading';
 import AlbumsListItem from '../components/albumsListItem';
 import AlbumsForm from '../components/albumsForm';

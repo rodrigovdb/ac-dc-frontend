@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router';
 
-import { useAlbum } from '../hooks/albums/useAlbum';
+import { useAlbum } from '../hooks/useAlbum';
 import Loading from '../components/loading';
 import AlbumsShow from '../components/albumsShow';
 

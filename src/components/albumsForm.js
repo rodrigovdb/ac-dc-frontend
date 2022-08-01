@@ -4,7 +4,7 @@ import React from 'react';
 import { useState } from 'react';
 import { Navigate } from 'react-router-dom';
 
-import { useAlbumCreate} from '../hooks/albums/useAlbumCreate';
+import { useAlbumCreate} from '../hooks/useAlbumCreate';
 import Loading from './loading';
 
 const AlbumsForm = () => {
@@ -49,6 +49,7 @@ const AlbumsForm = () => {
                 type="primary"
                 onClick={showModal}
                 className="buttonShowModal"
+                danger
             >
                 Create Album
             </Button>
@@ -128,7 +129,11 @@ const AlbumsForm = () => {
                             span: 16,
                         }}
                         >
-                        <Button type="primary" htmlType="submit">
+                        <Button
+                            type="primary"
+                            htmlType="submit"
+                            danger
+                        >
                             Submit
                         </Button>
                     </Form.Item>

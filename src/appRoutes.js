@@ -17,6 +17,10 @@ const AppRoutes = () => {
                     <PageHeader title="AC/DC" subTitle="Studio Albums" />
 
                     <Routes>
+                        <Route path="/">
+                            <Route index element={<AlbumsPage />} />
+                        </Route>
+
                         <Route path="/ac-dc-frontend/">
                             <Route index element={<AlbumsPage />} />
                         </Route>

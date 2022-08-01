@@ -1,4 +1,4 @@
-import { Row, Col, Image, Typography } from 'antd';
+import { Row, Col, Button, Space, Image, Typography } from 'antd';
 
 import React from 'react';
 
@@ -7,6 +7,19 @@ const { Title } = Typography;
 const AlbumsShowHeader = (props) => {
     return(
         <div>
+            <Row gutter={16}>
+                <Col span={24}>
+                    <Button
+                        href="/ac-dc-frontend/albums"
+                        type="primary"
+                        danger
+                    >
+                        Back to albums
+                    </Button>
+                </Col>
+                <Col>&nbsp;</Col>
+            </Row>
+
             <Row gutter={16}>
                 <Col className="gutter-row" span={6}>
                     <Image
